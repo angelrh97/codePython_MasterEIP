@@ -19,7 +19,7 @@ class figuraGeomNoCalc(Error):
     pass
 
 
-def operacionesGeometricas(figuraGeom, *args):
+def operacionesGeometricas(figuraGeom: str, *args: float) -> int:
     """
     Calcula el área o el volumen de diferentes figuras geométricas.
     

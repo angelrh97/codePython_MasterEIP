@@ -4,7 +4,7 @@ from u04_bpp_examenPractico import operacionesGeometricas
 
 class TestMathOperations(unittest.TestCase):
     """
-    Calculamos una operacion de volumen y de area para cada figura siendo radio o lado 2
+    Zona de testeo de las diferentes operaciones segun la figura introducida
     """
     def test_area_circulo(self):
         self.assertEqual(operacionesGeometricas('circulo', 5), math.pi*5**2)
