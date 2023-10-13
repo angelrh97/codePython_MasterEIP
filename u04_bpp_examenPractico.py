@@ -36,7 +36,7 @@ def operacionesGeometricas(figuraGeom, *args):
 
         if isinstance(figuraGeom, str) != True:
             raise EntradasNoString
-        elif len(figuraGeom) > 1 :
+        elif len(figuraGeom.split(' ')) > 1 :
             raise EntradasConEspacios
         elif any(x < 0 for x in args):
             raise EntradasNegativas
@@ -44,22 +44,22 @@ def operacionesGeometricas(figuraGeom, *args):
             raise figuraGeomNoCalc
         
         if figuraGeom == 'circulo':
-            assert(len(args) != 1), "El circulo requiere de un radio como argumento"
+            assert(len(args) == 1), "El circulo requiere de un radio como argumento"
             radio = args[0]
             return math.pi * radio**2
         
         elif figuraGeom == 'triangulo':
-            assert(len(args) != 2), "El triangulo requiere de una base y una altura como argumentos"
+            assert(len(args) == 2), "El triangulo requiere de una base y una altura como argumentos"
             base, altura = args
             return 0.5 * base * altura
         
         elif figuraGeom == 'cuadrado':
-            assert(len(args) != 1), "El cuadrado requiere de un lado como argumento"
+            assert(len(args) == 1), "El cuadrado requiere de un lado como argumento"
             lado = args[0]
             return lado**2
 
         elif figuraGeom == 'cubo':
-            assert(len(args) != 1), "El cubo requiere de un lado como argumento"
+            assert(len(args) == 1), "El cubo requiere de un lado como argumento"
             lado = args[0]
             return lado**3
         
@@ -73,3 +73,12 @@ def operacionesGeometricas(figuraGeom, *args):
         print("\n No tenemos constancia de esta FIGURA en nuestra BBDD \n")
     
 
+"""
+if __name__ == '__main__':
+
+    print(f"Area de un circulo de radio 5 = {operacionesGeometricas('circulo', 5)}")
+    print(f"Area de un triangulo de base 5 y altura 2 = {operacionesGeometricas('triangulo', 2, 2)}")
+    print(f"Area de un cuadrado de lado 5 = {operacionesGeometricas('cuadrado', 5)}")
+    print(f"Volumen de un cubo de lado 3 = {operacionesGeometricas('cubo', 3)}")
+
+"""
