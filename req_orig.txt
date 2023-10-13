@@ -2,3 +2,4 @@ pandas~=2.1
 matplotlib~=3.7
 jupyterlab~=4.0
 unittest2
+sphinx
