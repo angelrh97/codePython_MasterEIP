@@ -1,8 +1,8 @@
-import unnitest2
+import unittest
 import math
 from u04_bpp_examenPractico import operacionesGeometricas
 
-class TestMathOperations(unnitest2.TestCase):
+class TestMathOperations(unittest.TestCase):
     """
     Calculamos una operacion de volumen y de area para cada figura siendo radio o lado 2
     """
@@ -12,4 +12,4 @@ class TestMathOperations(unnitest2.TestCase):
     self.assertEqual(operacionesGeometricas('cuadrado', 3), 3**3)
 
 if __name__ == '__main__':
-    unnitest2.main()
+    unittest.main()
