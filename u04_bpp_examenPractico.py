@@ -31,6 +31,16 @@ def operacionesGeometricas(figuraGeom: str, *args: float) -> int:
     Outputs:
     --------
         float: El área o el volumen calculado.
+
+    Ejemplo:
+    --------
+    >>> if __name__ == '__main__':
+    >>>     import operacionesGeometricas
+    >>>     print(f"Area de un circulo de radio 5 = {operacionesGeometricas('circulo', 5)}")
+    >>>     print(f"Area de un triangulo de base 5 y altura 2 = {operacionesGeometricas('triangulo', 2, 2)}")
+    >>>     print(f"Area de un cuadrado de lado 5 = {operacionesGeometricas('cuadrado', 5)}")
+    >>>     print(f"Volumen de un cubo de lado 3 = {operacionesGeometricas('cubo', 3)}")
+
     """
     try:
 
@@ -72,13 +82,3 @@ def operacionesGeometricas(figuraGeom: str, *args: float) -> int:
     except figuraGeomNoCalc:
         print("\n No tenemos constancia de esta FIGURA en nuestra BBDD \n")
     
-
-"""
-if __name__ == '__main__':
-
-    print(f"Area de un circulo de radio 5 = {operacionesGeometricas('circulo', 5)}")
-    print(f"Area de un triangulo de base 5 y altura 2 = {operacionesGeometricas('triangulo', 2, 2)}")
-    print(f"Area de un cuadrado de lado 5 = {operacionesGeometricas('cuadrado', 5)}")
-    print(f"Volumen de un cubo de lado 3 = {operacionesGeometricas('cubo', 3)}")
-
-"""
